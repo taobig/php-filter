@@ -8,7 +8,7 @@ A type validate &amp; filter plugin for php projects
 
 ### INSTALLATION
 **Install via Composer**  
-If you do not have Composer, you may install it by following the instructions at getcomposer.org.
+If you do not have Composer, you may install it refer to [getcomposer.org](https://getcomposer.org/download/).
 
 You can then install this project template using the following command:
 ```
