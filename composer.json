@@ -12,5 +12,6 @@
     },
     "autoload": {
         "psr-4": { "taobig\\filter\\": "src/" }
-    }
+    },
+    "homepage" : "https://github.com/taobig/php-filter"
 }
