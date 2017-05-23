@@ -21,7 +21,12 @@ php composer.phar require taobig/php-filter
 $validator = new taobig\filter\filters\TypeValidator();
 $validator->isString("hello world");//return true
 $validator->isString(1111.32333, false);//return true
-
+$validator->isInt(1111);//return true
+$validator->isInt("1111", false);//return true
+$validator->isListInt([1111]);//return true
+$validator->isListInt(["1111"], false);//return true
+$validator->isListString(["1111"]);//return true
+$validator->isListString([1111], false);//return true
 
 $filter = new taobig\filter\filters\TypeFilter(['exceptionMessage'=>'parameters type error']);
 $filter->stringVal("hello world");//return "hello world"

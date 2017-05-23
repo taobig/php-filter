@@ -18,7 +18,7 @@ class TypeValidator
         return false;
     }
 
-    public function isInt($val, bool $strict_type = true)
+    public function isInt($val, bool $strict_type = true): bool
     {
         if (is_int($val)) {
             return true;
@@ -31,6 +31,42 @@ class TypeValidator
             }
         }
         return false;
+    }
+
+    public function isListInt($val, bool $strict_type = true): bool
+    {
+        if (!is_array($val)) {
+            return false;
+        }
+        if (empty($val)) {
+            return false;
+        }
+
+        foreach ($val as $one) {
+            if (!$this->isInt($one, $strict_type)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public function isListString($val, bool $strict_type = true): bool
+    {
+        if (!is_array($val)) {
+            return false;
+        }
+        if (empty($val)) {
+            return false;
+        }
+
+        foreach ($val as $one) {
+            if (!$this->isString($one, $strict_type)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
