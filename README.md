@@ -31,4 +31,5 @@ $validator->isListString([1111], false);//return true
 $filter = new taobig\filter\filters\TypeFilter(['exceptionMessage'=>'parameters type error']);
 $filter->stringVal("hello world");//return "hello world"
 $filter->stringVal(1111.32333, false);//return "1111.32333"
+$filter->intVal("1111", false);//return 1111
 ```
