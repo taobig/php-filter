@@ -19,6 +19,17 @@ class FilterTest extends TestCase
         $this->assertSame('', $filter->stringVal($val, false));
     }
 
+    public function testStringValException()
+    {
+        $exceptionMessage = 'parameters type error';
+        $exceptionClass = \Exception::class;
+        $filter = new taobig\filter\filters\TypeFilter(['exceptionMessage' => $exceptionMessage, 'exceptionClass' => $exceptionClass]);
+        $this->expectException($exceptionClass);
+        $this->expectExceptionMessage($exceptionMessage);
+        $val = [];
+        $this->assertSame('', $filter->stringVal($val, false));
+    }
+
     public function testIntVal()
     {
         $filter = new taobig\filter\filters\TypeFilter();
@@ -32,6 +43,17 @@ class FilterTest extends TestCase
 
         $this->expectException(\TypeError::class);
         $val = [];
+        $this->assertSame('', $filter->intVal($val, false));
+    }
+
+    public function testIntValException()
+    {
+        $exceptionMessage = 'parameters type error';
+        $exceptionClass = \Exception::class;
+        $filter = new taobig\filter\filters\TypeFilter(['exceptionMessage' => $exceptionMessage, 'exceptionClass' => $exceptionClass]);
+        $this->expectException($exceptionClass);
+        $this->expectExceptionMessage($exceptionMessage);
+        $val = "abc";
         $this->assertSame('', $filter->intVal($val, false));
     }
 
