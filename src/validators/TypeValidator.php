@@ -5,7 +5,7 @@ namespace taobig\filter\validators;
 class TypeValidator
 {
 
-    public function isString($val, bool $strict_type = true): bool
+    final public function isString($val, bool $strict_type = true): bool
     {
         if (is_string($val)) {
             return true;
@@ -18,7 +18,7 @@ class TypeValidator
         return false;
     }
 
-    public function isInt($val, bool $strict_type = true): bool
+    final public function isInt($val, bool $strict_type = true): bool
     {
         if (is_int($val)) {
             return true;
@@ -33,7 +33,7 @@ class TypeValidator
         return false;
     }
 
-    public function isListInt($val, bool $strict_type = true): bool
+    final  public function isListInt($val, bool $strict_type = true): bool
     {
         if (!is_array($val)) {
             return false;
@@ -51,7 +51,7 @@ class TypeValidator
         return true;
     }
 
-    public function isListString($val, bool $strict_type = true): bool
+    final public function isListString($val, bool $strict_type = true): bool
     {
         if (!is_array($val)) {
             return false;

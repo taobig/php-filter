@@ -1,7 +1,7 @@
 <?php
 
 
-class ValidatorTest extends TestCase
+class TypeValidatorTest extends TestCase
 {
 
     public function testIsString()
