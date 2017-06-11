@@ -6,7 +6,7 @@ class MobileValidator extends TypeValidator
 {
 
     /**
-     * Without validation Country Calling Code (references:https://en.wikipedia.org/wiki/List_of_country_calling_codes)
+     * Without validating Country Calling Code (references:https://en.wikipedia.org/wiki/List_of_country_calling_codes)
      * @param string $val
      * @return bool
      */

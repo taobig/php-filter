@@ -1,6 +1,6 @@
 {
     "name": "taobig/php-filter",
-    "description": "A type validate & filter plugin for php projects",
+    "description": "A type validate & filter plugin for PHP projects",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
