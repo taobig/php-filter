@@ -35,4 +35,16 @@ $filter->intVal("1111", false);//return 1111
 
 $validator = new taobig\filter\validators\MobileValidator();  
 $validator->isChineseMobile("13800001111");//return true
+
+
+
+$helper = new taobig\filter\helpers\StringHelper();
+$helper->startsWith("hello world", "h");//true
+$helper->startsWith("hello world", "");//true
+$helper->startsWith("hello world", "H");//false
+$helper->startsWith("hello", "hello world");//false
+
+$helper->endsWith("hello world", "world");//true
+$helper->endsWith("world", "hello world");//false
+$helper->endsWith("", "hello world");//false
 ```
