@@ -1,5 +1,5 @@
 # php-filter
-A type validate &amp; filter plugin for php projects
+A type validate &amp; filter plugin for PHP projects
 
 [![Latest Stable Version](https://poser.pugx.org/taobig/php-filter/v/stable)](https://packagist.org/packages/taobig/php-filter)
 [![Total Downloads](https://poser.pugx.org/taobig/php-filter/downloads)](https://packagist.org/packages/taobig/php-filter)
