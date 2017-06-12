@@ -1,12 +1,13 @@
 <?php
 
+use taobig\filter\validators\TypeValidator;
 
 class TypeValidatorTest extends TestCase
 {
 
     public function testIsString()
     {
-        $validator = new taobig\filter\validators\TypeValidator();
+        $validator = new TypeValidator();
         $this->assertEquals(true, $validator->isString("hello world"));
         $this->assertEquals(true, $validator->isString(11.2233, false));
         $this->assertEquals(false, $validator->isString([]));
@@ -15,7 +16,7 @@ class TypeValidatorTest extends TestCase
 
     public function testIsInt()
     {
-        $validator = new taobig\filter\validators\TypeValidator();
+        $validator = new TypeValidator();
         $this->assertEquals(true, $validator->isInt(123));
         $this->assertEquals(true, $validator->isInt("123", false));
         $this->assertEquals(false, $validator->isInt(11.2233, false));
@@ -27,7 +28,7 @@ class TypeValidatorTest extends TestCase
 
     public function testIsIntList()
     {
-        $validator = new taobig\filter\validators\TypeValidator();
+        $validator = new TypeValidator();
         $this->assertEquals(false, $validator->isIntList(123, false));
         $this->assertEquals(false, $validator->isIntList(["123"]));
         $this->assertEquals(false, $validator->isIntList([11.2233], false));
@@ -40,7 +41,7 @@ class TypeValidatorTest extends TestCase
 
     public function testIsStringList()
     {
-        $validator = new taobig\filter\validators\TypeValidator();
+        $validator = new TypeValidator();
         $this->assertEquals(false, $validator->isStringList("123", false));
         $this->assertEquals(false, $validator->isStringList([123]));
         $this->assertEquals(true, $validator->isStringList(["123"], false));

@@ -38,13 +38,18 @@ $validator->isChineseMobile("13800001111");//return true
 
 
 
-$helper = new taobig\filter\helpers\StringHelper();
-$helper->startsWith("hello world", "h");//true
-$helper->startsWith("hello world", "");//true
-$helper->startsWith("hello world", "H");//false
-$helper->startsWith("hello", "hello world");//false
+use taobig\filter\helpers\StringHelper;
+StringHelper::startsWith("hello world", "h");//true
+StringHelper::startsWith("hello world", "");//true
+StringHelper::startsWith("hello world", "H");//false
+StringHelper::startsWith("hello", "hello world");//false
 
-$helper->endsWith("hello world", "world");//true
-$helper->endsWith("world", "hello world");//false
-$helper->endsWith("", "hello world");//false
+StringHelper::endsWith("hello world", "world");//true
+StringHelper::endsWith("world", "hello world");//false
+StringHelper::endsWith("", "hello world");//false
+
+StringHelper::stripLeft("hello world", "hello ");//"world"
+
+StringHelper::stripRight("hello world", "world");//"hello "
+
 ```

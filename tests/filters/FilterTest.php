@@ -1,12 +1,13 @@
 <?php
 
+use taobig\filter\filters\TypeFilter;
 
 class FilterTest extends TestCase
 {
 
     public function testStringVal()
     {
-        $filter = new taobig\filter\filters\TypeFilter();
+        $filter = new TypeFilter();
         $val = "hello world";
         $this->assertSame($val, $filter->stringVal($val));
         $val = 11.2233;
@@ -23,7 +24,7 @@ class FilterTest extends TestCase
     {
         $exceptionMessage = 'parameters type error';
         $exceptionClass = \Exception::class;
-        $filter = new taobig\filter\filters\TypeFilter(['exceptionMessage' => $exceptionMessage, 'exceptionClass' => $exceptionClass]);
+        $filter = new TypeFilter(['exceptionMessage' => $exceptionMessage, 'exceptionClass' => $exceptionClass]);
         $this->expectException($exceptionClass);
         $this->expectExceptionMessage($exceptionMessage);
         $val = [];
@@ -32,7 +33,7 @@ class FilterTest extends TestCase
 
     public function testIntVal()
     {
-        $filter = new taobig\filter\filters\TypeFilter();
+        $filter = new TypeFilter();
 
         $val = 1234;
         $this->assertSame($val, $filter->intVal($val));
@@ -50,7 +51,7 @@ class FilterTest extends TestCase
     {
         $exceptionMessage = 'parameters type error';
         $exceptionClass = \Exception::class;
-        $filter = new taobig\filter\filters\TypeFilter(['exceptionMessage' => $exceptionMessage, 'exceptionClass' => $exceptionClass]);
+        $filter = new TypeFilter(['exceptionMessage' => $exceptionMessage, 'exceptionClass' => $exceptionClass]);
         $this->expectException($exceptionClass);
         $this->expectExceptionMessage($exceptionMessage);
         $val = "abc";
