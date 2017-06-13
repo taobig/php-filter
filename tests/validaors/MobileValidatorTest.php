@@ -8,7 +8,7 @@ class MobileValidatorTest extends TestCase
     public function testIsChineseMobile()
     {
         $validator = new MobileValidator();
-        $this->assertEquals(true, $validator->isChineseMobile("13800001111"));
+        $this->assertSame(true, $validator->isChineseMobile("13800001111"));
 
     }
 
