@@ -1,17 +1,22 @@
 {
-    "name": "taobig/php-filter",
-    "description": "A type validate & filter plugin for PHP projects",
-    "type": "library",
-    "license": "MIT",
-    "minimum-stability": "stable",
-    "require": {
-        "php": "^7.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~6.1"
-    },
-    "autoload": {
-        "psr-4": { "taobig\\filter\\": "src/" }
-    },
-    "homepage" : "https://github.com/taobig/php-filter"
+	"name" : "taobig/php-filter",
+	"description" : "A type validate & filter plugin for PHP projects",
+	"type" : "library",
+	"license" : "MIT",
+	"minimum-stability" : "stable",
+	"require" : {
+		"php" : "^7.0"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "~6.1"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"taobig\\filter\\" : "src/"
+		}
+	},
+	"homepage" : "https://github.com/taobig/php-filter",
+	"support" : {
+		"issues" : "https://github.com/taobig/php-filter/issues"
+	}
 }
