@@ -37,6 +37,7 @@ $validator = new taobig\filter\validators\MobileValidator();
 $validator->isChineseMobile("13800001111");//return true
 
 
+-----------------------------------
 
 use taobig\filter\helpers\StringHelper;
 StringHelper::startsWith("hello world", "h");//true
@@ -51,5 +52,8 @@ StringHelper::endsWith("", "hello world");//false
 StringHelper::stripLeft("hello world", "hello ");//"world"
 
 StringHelper::stripRight("hello world", "world");//"hello "
+
+
+DatetimeHelper::millisecondTimestamps();//1497966001944
 
 ```
