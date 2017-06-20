@@ -4,7 +4,8 @@ namespace taobig\filter\helpers;
 
 class DatetimeHelper
 {
-    public static function millisecondTimestamps(): int
+
+    public static function millisecondTimestamp(): int
     {
         if (PHP_INT_SIZE < 8) {
             return -1;

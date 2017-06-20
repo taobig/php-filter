@@ -33,7 +33,7 @@ class TypeValidator
         return false;
     }
 
-    final  public function isIntList($val, bool $strict_type = true): bool
+    final public function isIntList($val, bool $strict_type = true): bool
     {
         if (!is_array($val)) {
             return false;

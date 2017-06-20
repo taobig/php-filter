@@ -54,6 +54,6 @@ StringHelper::stripLeft("hello world", "hello ");//"world"
 StringHelper::stripRight("hello world", "world");//"hello "
 
 
-DatetimeHelper::millisecondTimestamps();//1497966001944
+DatetimeHelper::millisecondTimestamp();//1497966001944
 
 ```
