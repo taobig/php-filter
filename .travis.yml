@@ -33,9 +33,9 @@ install:
 
 before_script:
   # show some versions and env information
-  - php -r "ini_get('memory_limit');";
+  - php -r "echo ini_get('memory_limit').PHP_EOL;";
   - echo 'memory_limit = 64M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-  - php -r "ini_get('memory_limit');";
+  - php -r "echo ini_get('memory_limit').PHP_EOL;";
   - php -r "echo INTL_ICU_VERSION . \"\n\";"
   - php -r "echo INTL_ICU_DATA_VERSION . \"\n\";"
 
