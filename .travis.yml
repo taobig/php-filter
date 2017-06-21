@@ -36,11 +36,11 @@ install:
 
 before_script:
   # show some versions and env information
-  - echo `php -r "echo ini_get('memory_limit').PHP_EOL;";`
+  - php -r "echo ini_get('memory_limit').PHP_EOL;"
   - echo 'memory_limit = 64M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-  - echo `php -r "echo ini_get('memory_limit').PHP_EOL;";`
-  - echo `php -r "echo INTL_ICU_VERSION . \"\n\";"`
-  - echo `php -r "echo INTL_ICU_DATA_VERSION . \"\n\";"`
+  - php -r "echo ini_get('memory_limit').PHP_EOL;"
+  - php -r "echo INTL_ICU_VERSION . PHP_EOL;"
+  - php -r "echo INTL_ICU_DATA_VERSION . PHP_EOL;"
 
 script:
   # ensure no files contain UTF-8 byte order mark
