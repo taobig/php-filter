@@ -24,8 +24,8 @@ cache:
     - vendor
     - $HOME/.composer/cache
 
-before_install:
-  - sudo apt-get -qq update
+#before_install:
+#  - sudo apt-get -qq update
 
 install:
   - |
