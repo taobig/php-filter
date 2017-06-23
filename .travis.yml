@@ -49,3 +49,6 @@ script:
   - composer validate --no-check-lock
   # run PHPUnit
   - vendor/bin/phpunit --verbose
+
+after_success:
+ - travis_retry php vendor/bin/coveralls -v
