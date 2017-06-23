@@ -52,6 +52,7 @@ StringHelper::endsWith("world", "hello world");//false
 StringHelper::endsWith("", "hello world");//false
 
 StringHelper::stripLeft("hello world", "hello ");//"world"
+StringHelper::stripLeft("https://google.com", "https://");//"google.com"
 
 StringHelper::stripRight("hello world", "world");//"hello "
 
