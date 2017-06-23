@@ -2,9 +2,11 @@
 A type validate &amp; filter plugin for PHP projects
 
 [![Latest Stable Version](https://poser.pugx.org/taobig/php-filter/v/stable)](https://packagist.org/packages/taobig/php-filter)
+[![Latest Unstable Version](https://poser.pugx.org/taobig/php-filter/v/unstable)](https://packagist.org/packages/taobig/php-filter)
 [![Total Downloads](https://poser.pugx.org/taobig/php-filter/downloads)](https://packagist.org/packages/taobig/php-filter)
 [![License](https://poser.pugx.org/taobig/php-filter/license)](https://packagist.org/packages/taobig/php-filter)
 [![Build Status](https://travis-ci.org/taobig/php-filter.svg?branch=master)](https://travis-ci.org/taobig/php-filter)
+[![Coverage Status](https://coveralls.io/repos/github/taobig/php-filter/badge.svg)](https://coveralls.io/github/taobig/php-filter)
 
 ### INSTALLATION
 **Install via Composer**  
