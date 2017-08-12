@@ -20,23 +20,24 @@ php composer.phar require taobig/php-filter
 
 ## Usage
 ```
-$validator = new taobig\filter\filters\TypeValidator();
-$validator->isString("hello world");//return true
-$validator->isString(1111.32333, false);//return true
-$validator->isInt(1111);//return true
-$validator->isInt("1111", false);//return true
-$validator->isIntList([1111]);//return true
-$validator->isIntList(["1111"], false);//return true
-$validator->isStringList(["1111"]);//return true
-$validator->isStringList([1111], false);//return true
+use taobig\filter\filters\TypeValidator;
+TypeValidator::isString("hello world");//return true
+TypeValidator::isString(1111.32333, false);//return true
+TypeValidator::isInt(1111);//return true
+TypeValidator::isInt("1111", false);//return true
+TypeValidator::isIntList([1111]);//return true
+TypeValidator::isIntList(["1111"], false);//return true
+TypeValidator::isStringList(["1111"]);//return true
+TypeValidator::isStringList([1111], false);//return true
+
 
 $filter = new taobig\filter\filters\TypeFilter(['exceptionMessage'=>'parameters type error']);
 $filter->stringVal("hello world");//return "hello world"
 $filter->stringVal(1111.32333, false);//return "1111.32333"
 $filter->intVal("1111", false);//return 1111
 
-$validator = new taobig\filter\validators\MobileValidator();  
-$validator->isChineseMobile("13800001111");//return true
+use taobig\filter\filters\MobileValidator;  
+TypeValidator::isChineseMobile("13800001111");//return true
 
 
 -----------------------------------
