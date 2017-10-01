@@ -58,6 +58,16 @@ StringHelper::stripLeft("https://google.com", "https://");//"google.com"
 StringHelper::stripRight("hello world", "world");//"hello "
 
 
+use taobig\filter\helpers\DatetimeHelper;
 DatetimeHelper::millisecondTimestamp();//1497966001944
+
+
+use taobig\filter\helpers\MathHelper;
+MathHelper::add("1.01", "2.12");//"3.13"
+MathHelper::add("1.01666", "2.12999");//"3.14"
+MathHelper::sub("5.11", "3.10");//"2.01"
+MathHelper::mul("1.11", "3");//"3.33"
+MathHelper::div("1", "0.0003");//"3333.33"
+MathHelper::comp("3", "3.009");//0
 
 ```
