@@ -2,7 +2,7 @@
 
 use taobig\filter\filters\TypeFilter;
 
-class FilterTest extends TestCase
+class TypeFilterTest extends TestCase
 {
 
     public function testStringVal()
@@ -40,11 +40,16 @@ class FilterTest extends TestCase
 
         $this->expectException(\TypeError::class);
         $val = 11.2233;
-        $this->assertSame('' . $val, $filter->intVal($val, false));
+        $this->assertSame('', $filter->intVal($val, false));
 
         $this->expectException(\TypeError::class);
         $val = [];
         $this->assertSame('', $filter->intVal($val, false));
+
+        $val = 1234;
+        $this->assertSame($val, $filter->intVal($val, false));
+        $val = "1234";
+        $this->assertSame(intval($val), $filter->intVal($val, false));
     }
 
     public function testIntValException()
