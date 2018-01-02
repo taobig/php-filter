@@ -38,21 +38,31 @@ class TypeFilterTest extends TestCase
         $val = 1234;
         $this->assertSame($val, $filter->intVal($val));
 
-        $this->expectException(\TypeError::class);
-        $val = 11.2233;
-        $this->assertSame('', $filter->intVal($val, false));
-
-        $this->expectException(\TypeError::class);
-        $val = [];
-        $this->assertSame('', $filter->intVal($val, false));
-
         $val = 1234;
         $this->assertSame($val, $filter->intVal($val, false));
         $val = "1234";
         $this->assertSame(intval($val), $filter->intVal($val, false));
     }
 
-    public function testIntValException()
+    public function testIntValException1()
+    {
+        $filter = new TypeFilter();
+
+        $this->expectException(\TypeError::class);
+        $val = 11.2233;
+        $this->assertSame('', $filter->intVal($val, false));
+    }
+
+    public function testIntValException2()
+    {
+        $filter = new TypeFilter();
+
+        $this->expectException(\TypeError::class);
+        $val = [];
+        $this->assertSame('', $filter->intVal($val, false));
+    }
+
+    public function testIntValException3()
     {
         $exceptionMessage = 'parameters type error';
         $exceptionClass = \Exception::class;
