@@ -38,7 +38,13 @@ class MathHelper
      */
     public static function mul(string $left_operand, string $right_operand, int $scale = 2): string
     {
-        return bcmul($left_operand, $right_operand, $scale);
+
+        $result = bcmul($left_operand, $right_operand, $scale);
+        if (PHP_VERSION_ID >= 70300) {
+            return $result;
+        } else {//@see: https://bugs.php.net/bug.php?id=66364
+            return bcadd($result, "0", $scale);
+        }
     }
 
     /**

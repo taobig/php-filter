@@ -28,8 +28,13 @@ class MathHelperTest extends TestCase
 
     public function testMul()
     {
-        $this->assertSame("6", MathHelper::mul("2", "3"));
-        $this->assertSame("3.33", MathHelper::mul("1.11", "3"));
+        $this->assertSame("6.0000", MathHelper::mul("2", "3", 4));
+        $this->assertNotSame("6", MathHelper::mul("2", "3"));
+
+        $this->assertSame("7.26000", MathHelper::mul("2.2", "3.3", 5));
+
+        $this->assertSame("6.00", MathHelper::mul("2", "3"));
+        $this->assertSame("3.33", MathHelper::mul("1.1111111", "3"));
     }
 
     public function testDiv()
