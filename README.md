@@ -39,16 +39,3 @@ $filter->intVal("1111", false);//return 1111
 use taobig\filter\filters\MobileValidator;  
 TypeValidator::isChineseMobile("13800001111");//return true
 
-
------------------------------------
-
-
-use taobig\filter\helpers\MathHelper;
-MathHelper::add("1.01", "2.12");//"3.13"
-MathHelper::add("1.01666", "2.12999");//"3.14"
-MathHelper::sub("5.11", "3.10");//"2.01"
-MathHelper::mul("1.11", "3");//"3.33"
-MathHelper::div("1", "0.0003");//"3333.33"
-MathHelper::comp("3", "3.009");//0
-
-```
