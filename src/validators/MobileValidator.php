@@ -22,7 +22,7 @@ class MobileValidator extends TypeValidator
         if ($val[0] != 1) {
             return false;
         }
-        if (!in_array($val[1], [3, 4, 5, 7, 8])) {
+        if (!in_array($val[1], [3, 4, 5, 7, 8, 9])) {
             return false;
         }
         return true;
